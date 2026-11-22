@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>គណនាថ្លៃផ្ញើរយានជំនិះ</title>
+    <!-- Google Font: Kantumruy Pro សម្រាប់អក្សរខ្មែរ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ស្រទាប់ព្រិលធ្លាក់ -->
+    <canvas id="snowCanvas"></canvas>
+
+    <!-- ប៊ូតុងបិទ/បើកព្រិល -->
+    <!-- ប៊ូតុងបិទ/បើកព្រិល និងប៊ូតុងដាក់រូបភាព Background -->
+    <div class="top-controls">
+        <label for="bgUpload" class="control-btn">🖼️ ប្តូរផ្ទៃខាងក្រោយ</label>
+        <input type="file" id="bgUpload" accept="image/*" hidden />
+        <button id="toggleSnowBtn" class="control-btn">❄️ ព្រិល: កំពុងធ្លាក់</button>
+    </div>
+    <main class="container">
+        <!-- កាតខាងឆ្វេង៖ ទម្រង់គណនា -->
+        <section class="card form-card">
+            <h1 class="title">គណនាថ្លៃផ្ញើរយានជំនិះ</h1>
+
+            <div class="form-group">
+                <label for="vehicleType">ជ្រើសរើស យានជំនិះ</label>
+                <div class="input-wrapper">
+                    <select id="vehicleType">
+                        <option value="car">ឡាន</option>
+                        <option value="moto">ម៉ូតូ</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="timeIn">ម៉ោងចូល</label>
+                <div class="input-wrapper">
+                    <input type="time" id="timeIn" value="08:00" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="timeOut">ម៉ោងចេញ</label>
+                <div class="input-wrapper">
+                    <input type="time" id="timeOut" value="12:00" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="feeRiel">ថ្លៃផ្ញើរ រៀល</label>
+                <div class="input-wrapper output-box">
+                    <input type="text" id="feeRiel" readonly placeholder="0" />
+                    <span class="currency">៛</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="feeDollar">ថ្លៃផ្ញើរ ដុល្លា</label>
+                <div class="input-wrapper output-box">
+                    <input type="text" id="feeDollar" readonly placeholder="0.00" />
+                    <span class="currency">$</span>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button id="calcBtn" class="calc-btn">គណនា</button>
+            </div>
+
+            <p id="durationInfo" class="duration-info"></p>
+        </section>
+
+        <!-- កាតខាងស្តាំ៖ តារាងតម្លៃ -->
+        <section class="card info-card">
+            <div class="price-block">
+                <h2>ឡាន</h2>
+                <ul>
+                    <li>+ ប្រសិនបើផ្ញើរ ≤ 8h ⇒ 1h = 500៛</li>
+                    <li>+ តែបើលើស 8h ⇒ 1h = 1000៛</li>
+                </ul>
+            </div>
+
+            <div class="price-block">
+                <h2>ម៉ូតូ</h2>
+                <ul>
+                    <li>+ ប្រសិនបើផ្ញើរ ≤ 8h ⇒ 1h = 200៛</li>
+                    <li>+ តែបើលើស 8h ⇒ 1h = 300៛</li>
+                </ul>
+            </div>
+
+            <p class="exchange-note">*(អត្រាប្តូរប្រាក់៖ 1$ = 4,000៛)</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
