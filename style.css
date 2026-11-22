@@ -13,12 +13,10 @@ body {
   padding: 24px;
   position: relative;
   overflow-x: hidden;
-  /* រូបភាព Background ចំណតឡាន */
   background: linear-gradient(rgba(10, 15, 25, 0.45), rgba(10, 15, 25, 0.55)),
               url('images/bg.jpg') center/cover no-repeat fixed;
 }
 
-/* Canvas សម្រាប់ព្រិលធ្លាក់ */
 #snowCanvas {
   position: fixed;
   top: 0;
@@ -29,7 +27,6 @@ body {
   z-index: 1;
 }
 
-/* ប៊ូតុងខាងលើស្តាំ */
 .top-controls {
   position: fixed;
   top: 16px;
@@ -57,20 +54,16 @@ body {
   background: rgba(255, 255, 255, 0.35);
 }
 
-/* Container ធំសម្រាប់កាតទាំងពីរ */
+/* តម្រឹមកាតតែមួយឱ្យនៅចំកណ្តាលអេក្រង់ */
 .container {
   position: relative;
   z-index: 5;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 24px;
   width: 100%;
-  max-width: 960px;
+  max-width: 520px;
 }
 
-/* រចនាប័ទ្មកាតពណ៌ផ្កាឈូកលាយក្រហមស្រាល + Glassmorphism */
 .card {
-  background: rgba(143, 131, 131, 0.86);
+  background: rgba(226, 149, 146, 0.86);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -145,7 +138,6 @@ body {
   pointer-events: none;
 }
 
-/* ប៊ូតុងគណនា */
 .button-row {
   display: grid;
   grid-template-columns: 145px 1fr;
@@ -184,50 +176,7 @@ body {
   min-height: 22px;
 }
 
-/* កាតខាងស្តាំ៖ តារាងតម្លៃ */
-.info-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 36px;
-}
-
-.price-block {
-  margin-bottom: 30px;
-}
-
-.price-block h2 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #111111;
-}
-
-.price-block ul {
-  list-style: none;
-  padding-left: 16px;
-}
-
-.price-block li {
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.85;
-  color: #1a1a1a;
-}
-
-.exchange-note {
-  margin-top: auto;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #2c1414;
-}
-
-/* Responsive សម្រាប់ទូរស័ព្ទ */
-@media (max-width: 780px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 540px) {
   .form-group,
   .button-row {
     grid-template-columns: 1fr;
@@ -235,9 +184,5 @@ body {
 
   .calc-btn {
     grid-column: 1;
-  }
-
-  .info-card {
-    padding-left: 28px;
   }
 }

@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>គណនាថ្លៃផ្ញើរយានជំនិះ</title>
-    <!-- Google Font: Kantumruy Pro សម្រាប់អក្សរខ្មែរ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
@@ -17,15 +16,15 @@
     <!-- ស្រទាប់ព្រិលធ្លាក់ -->
     <canvas id="snowCanvas"></canvas>
 
-    <!-- ប៊ូតុងបិទ/បើកព្រិល -->
-    <!-- ប៊ូតុងបិទ/បើកព្រិល និងប៊ូតុងដាក់រូបភាព Background -->
+    <!-- ប៊ូតុងប្តូរផ្ទៃខាងក្រោយ និងបិទ/បើកព្រិល -->
     <div class="top-controls">
         <label for="bgUpload" class="control-btn">🖼️ ប្តូរផ្ទៃខាងក្រោយ</label>
         <input type="file" id="bgUpload" accept="image/*" hidden />
         <button id="toggleSnowBtn" class="control-btn">❄️ ព្រិល: កំពុងធ្លាក់</button>
     </div>
+
     <main class="container">
-        <!-- កាតខាងឆ្វេង៖ ទម្រង់គណនា -->
+        <!-- កាតទម្រង់គណនា (នៅចំកណ្តាល) -->
         <section class="card form-card">
             <h1 class="title">គណនាថ្លៃផ្ញើរយានជំនិះ</h1>
 
@@ -74,27 +73,6 @@
             </div>
 
             <p id="durationInfo" class="duration-info"></p>
-        </section>
-
-        <!-- កាតខាងស្តាំ៖ តារាងតម្លៃ -->
-        <section class="card info-card">
-            <div class="price-block">
-                <h2>ឡាន</h2>
-                <ul>
-                    <li>+ ប្រសិនបើផ្ញើរ ≤ 8h ⇒ 1h = 500៛</li>
-                    <li>+ តែបើលើស 8h ⇒ 1h = 1000៛</li>
-                </ul>
-            </div>
-
-            <div class="price-block">
-                <h2>ម៉ូតូ</h2>
-                <ul>
-                    <li>+ ប្រសិនបើផ្ញើរ ≤ 8h ⇒ 1h = 200៛</li>
-                    <li>+ តែបើលើស 8h ⇒ 1h = 300៛</li>
-                </ul>
-            </div>
-
-            <p class="exchange-note">*(អត្រាប្តូរប្រាក់៖ 1$ = 4,000៛)</p>
         </section>
     </main>
 
